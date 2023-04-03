@@ -10,15 +10,34 @@ import SwiftUI
 struct ContentView: View {
     @StateObject var viewModel  = UnsplashViewModel(dataService: NetworkManager())
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }.onAppear {
-        
-        }.padding()
-    }
-    
-}
+        NavigationView {
+            VStack {
+                SearchView()
+                List(viewModel.images) { photo in
+                    VStack(alignment: .leading) {
+                        AsyncImage(url: URL(string: photo.urls.regular)) { phase in
+                            switch phase {
+                            case .empty:
+                                    ProgressView()
+                            case .success(let image):
+                                    image
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fill)
+                            case .failure:
+                                    Image(systemName: "exclamationmark.icloud.fill")
+                                        .foregroundColor(.red)
+                            @unknown default:
+                                    ProgressView()
+                            }
+                        }
+                        .frame(height: 200)
+                    }
+                }
+            }
+            .navigationTitle("Unsplash Photos")
+            .onAppear {
 
+            }
+        }
+    }    
+}

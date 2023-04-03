@@ -6,15 +6,9 @@
 //
 
 import Foundation
-    // This file was generated from JSON Schema using quicktype, do not modify it directly.
-    // To parse the JSON, add this file to your project and do:
-    //
-    //   let welcome = try? JSONDecoder().decode(Welcome.self, from: jsonData)
-
-import Foundation
 
     // MARK: - Welcome
-struct UnsplashPhoto: Decodable{
+struct UnsplashPhoto: Decodable {
     let total, totalPages: Int
     let results: [ApiResult]
 }
@@ -33,7 +27,7 @@ struct ApiResult: Decodable {
     let sponsorship: String
     let topicSubmissions: TopicSubmissions
     let user: User
-    let tags: [Tag]
+    let tags: [ImageTag]
 }
 
     // MARK: - ResultLinks
@@ -42,7 +36,7 @@ struct ResultLinks: Decodable {
 }
 
     // MARK: - Tag
-struct Tag: Decodable {
+struct ImageTag: Decodable {
     let type, title: String
     let source: Source?
 }
@@ -56,7 +50,7 @@ struct Source: Decodable {
 }
 
     // MARK: - Ancestry
-struct Ancestry: Decodable{
+struct Ancestry: Decodable {
     let type, category: Category
     let subcategory: Category?
 }
@@ -67,7 +61,7 @@ struct Category: Decodable {
 }
 
     // MARK: - CoverPhoto
-struct CoverPhoto: Decodable{
+struct CoverPhoto: Decodable {
     let id: String
     let createdAt, updatedAt, promotedAt: Date
     let width, height: Int
