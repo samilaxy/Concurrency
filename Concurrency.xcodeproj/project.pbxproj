@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4948A42D29DAD4F200884F9B /* ImageWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4948A42C29DAD4F200884F9B /* ImageWrapper.swift */; };
 		49E8E3E729DAC5D00085C50D /* ConcurrencyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E8E3E629DAC5D00085C50D /* ConcurrencyApp.swift */; };
 		49E8E3E929DAC5D00085C50D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E8E3E829DAC5D00085C50D /* ContentView.swift */; };
 		49E8E3EB29DAC5D20085C50D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49E8E3EA29DAC5D20085C50D /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4948A42C29DAD4F200884F9B /* ImageWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageWrapper.swift; sourceTree = "<group>"; };
 		49E8E3E329DAC5D00085C50D /* Concurrency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Concurrency.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49E8E3E629DAC5D00085C50D /* ConcurrencyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrencyApp.swift; sourceTree = "<group>"; };
 		49E8E3E829DAC5D00085C50D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -71,6 +73,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4948A42E29DAD92F00884F9B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4948A42F29DAD93A00884F9B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		49E8E3DA29DAC5D00085C50D = {
 			isa = PBXGroup;
 			children = (
@@ -94,10 +110,13 @@
 		49E8E3E529DAC5D00085C50D /* Concurrency */ = {
 			isa = PBXGroup;
 			children = (
+				4948A42F29DAD93A00884F9B /* ViewModels */,
+				4948A42E29DAD92F00884F9B /* Views */,
 				49E8E3E629DAC5D00085C50D /* ConcurrencyApp.swift */,
 				49E8E3E829DAC5D00085C50D /* ContentView.swift */,
 				49E8E3EA29DAC5D20085C50D /* Assets.xcassets */,
 				49E8E3EC29DAC5D20085C50D /* Preview Content */,
+				4948A42C29DAD4F200884F9B /* ImageWrapper.swift */,
 			);
 			path = Concurrency;
 			sourceTree = "<group>";
@@ -281,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49E8E3E929DAC5D00085C50D /* ContentView.swift in Sources */,
+				4948A42D29DAD4F200884F9B /* ImageWrapper.swift in Sources */,
 				49E8E3E729DAC5D00085C50D /* ConcurrencyApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
